@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/profile.css">
+    <link rel="stylesheet" href="./assets/css/contact-info.css">
+    <link rel="stylesheet" href="./assets/css/community.css">
+</head>
+
+<body>
+    <main>
+        <!-- Profile -->
+        <section id="profile" class="">
+            <div class="profile__header">
+                <svg xmlns="http://www.w3.org/2000/svg" id="profile-arrow" viewBox="0 0 24 24">
+                    <path
+                        d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z">
+                    </path>
+                </svg>
+                <h4>Profile</h4>
+            </div>
+            <div class="profile__body">
+                <figure id="profile__hover-text">
+                    <figcaption class="profile__hover-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M9 3H15L17 5H21C21.5523 5 22 5.44772 22 6V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V6C2 5.44772 2.44772 5 3 5H7L9 3ZM12 19C15.3137 19 18 16.3137 18 13C18 9.68629 15.3137 7 12 7C8.68629 7 6 9.68629 6 13C6 16.3137 8.68629 19 12 19ZM12 17C9.79086 17 8 15.2091 8 13C8 10.7909 9.79086 9 12 9C14.2091 9 16 10.7909 16 13C16 15.2091 14.2091 17 12 17Z">
+                            </path>
+                        </svg>
+                        <p>Change profile photo</p>
+                    </figcaption>
+                    <input type="file" id="fileInput"
+                        style="display: none; position: absolute;height: 100%;width: 100%;" accept="image/*">
+                    <img src="./assets/images/profile-1.jpeg" alt="" id="profile-picture">
+                </figure>
+                <div class="profile__body__info">
+                    <span>Your name</span>
+                    <div class="profile__body__info-name" id="profile__body__info-name">
+                        <h5 id="profile-name">Kishh Slv 👒</h5>
+                        <svg xmlns="http://www.w3.org/2000/svg" id="edit-name-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12.8995 6.85431L17.1421 11.0969L7.24264 20.9964H3V16.7538L12.8995 6.85431ZM14.3137 5.44009L16.435 3.31877C16.8256 2.92825 17.4587 2.92825 17.8492 3.31877L20.6777 6.1472C21.0682 6.53772 21.0682 7.17089 20.6777 7.56141L18.5563 9.68273L14.3137 5.44009Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="flex invisible" id="edit-name-input-container">
+                        <input type="text" id="profile-name-input" value="Kishh Slv 👒">
+                        <div>
+                            <img src="./assets/Icons/smile-24.png" alt="">
+                            <img src="./assets/Icons/single-tick-mark-30.png" alt="" onclick="changeProfileName()">
+                        </div>
+                    </div>
+                </div>
+                <p>This is not your username or pin. This name will be visible to your WhatsApp contacts.</p>
+                <div class="profile__body__info">
+                    <span>About</span>
+                    <div class="profile__body__info-name" id="profile__body__info-about">
+                        <p id="profile-about">SENDING YOU LOVE!!</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" id="edit-about-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12.8995 6.85431L17.1421 11.0969L7.24264 20.9964H3V16.7538L12.8995 6.85431ZM14.3137 5.44009L16.435 3.31877C16.8256 2.92825 17.4587 2.92825 17.8492 3.31877L20.6777 6.1472C21.0682 6.53772 21.0682 7.17089 20.6777 7.56141L18.5563 9.68273L14.3137 5.44009Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="flex invisible" id="edit-about-input-container">
+                        <input type="text" id="profile-about-input" value="SENDINIG YOU LOVE!!">
+                        <div>
+                            <img src="./assets/Icons/smile-24.png" alt="">
+                            <img src="./assets/Icons/single-tick-mark-30.png" alt="" onclick="changeProfileAbout()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community -->
+        <section id="community" class="">
+            <div class="community__header profile__header">
+                <svg xmlns="http://www.w3.org/2000/svg" id="communities_left_arrow" viewBox="0 0 24 24">
+                    <path
+                        d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z">
+                    </path>
+                </svg>
+                <h4>Communities</h4>
+            </div>
+            <div class="community__body">
+                <div class="new__community flex">
+                    <div class="new__community--icon">
+                        <img src="./assets/Icons/community.png" alt="Community">
+                    </div>
+                    <span>New community</span>
+                </div>
+                <div class="community">
+                    <div class="community__body--header">
+                        <img src="./assets/Icons/community.png" alt="Community">
+                        <h5>Daily Programming Updates</h5>
+                    </div>
+                    <hr style="border: none; background-color: var(--mid-gray); height: 1px;">
+                    <div class="flex">
+                        <div class="flex">
+                            <svg fill="#1C2033" width="52" height="52" version="1.1" id="lni_lni-volume-high"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;"
+                                xml:space="preserve">
+                                <g>
+                                    <path d="M46.9,26.9c-0.8-0.9-2.3-1-3.2-0.1c-0.9,0.8-1,2.3-0.1,3.2c1,1.1,1,3,0,4.2c-0.8,0.9-0.8,2.3,0.1,3.2
+		c0.4,0.4,1,0.6,1.5,0.6c0.6,0,1.2-0.2,1.7-0.7C49.5,34.3,49.5,29.7,46.9,26.9z" />
+                                    <path d="M52.5,22.7c-0.8-0.9-2.3-1-3.2-0.1c-0.9,0.8-1,2.3-0.1,3.2c3.2,3.4,3.2,9,0,12.4c-0.8,0.9-0.8,2.3,0.1,3.2
+		c0.4,0.4,1,0.6,1.5,0.6c0.6,0,1.2-0.2,1.7-0.7C57.2,36.2,57.2,27.8,52.5,22.7z" />
+                                    <path d="M58.1,18.6c-0.8-0.9-2.3-1-3.2-0.1c-0.9,0.8-1,2.3-0.1,3.2c5.3,5.7,5.3,15,0,20.7c-0.8,0.9-0.8,2.3,0.1,3.2
+		c0.4,0.4,1,0.6,1.5,0.6c0.6,0,1.2-0.2,1.7-0.7C64.9,38,64.9,26,58.1,18.6z" />
+                                    <path d="M34.4,12.3c-1.6-0.9-3.5-0.8-5,0.1l-10.8,6.7c-0.1,0-0.1,0.1-0.2,0.1H5.6c-2.7,0-4.9,2.2-4.9,4.9v15.8
+		c0,2.7,2.2,4.9,4.9,4.9h12.8c0.1,0,0.1,0,0.2,0.1l10.8,6.7c0.8,0.5,1.7,0.7,2.6,0.7c0.8,0,1.6-0.2,2.4-0.6c1.6-0.9,2.5-2.5,2.5-4.3
+		V16.5C36.9,14.8,35.9,13.1,34.4,12.3z M32.4,47.5c0,0.2-0.1,0.3-0.2,0.3c-0.1,0.1-0.3,0.1-0.4,0L21,41h0c-0.8-0.5-1.7-0.7-2.6-0.7
+		H5.6c-0.2,0-0.4-0.2-0.4-0.4V24.1c0-0.2,0.2-0.4,0.4-0.4h12.8c0.9,0,1.8-0.3,2.6-0.7l10.8-6.7c0.1-0.1,0.3-0.1,0.4,0
+		c0.1,0.1,0.2,0.2,0.2,0.3V47.5z" />
+                                </g>
+                            </svg>
+                            <div>
+                                <span>Announcements</span>
+                                <p>~ adattoajay: click up here</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>7:09 PM</p>
+                            <div style="display: flex; align-items: center;">
+                                <svg fill="#1C2033" width="52" height="52" version="1.1" id="lni_lni-volume-mute"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    x="0px" y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;"
+                                    xml:space="preserve">
+                                    <g>
+                                        <path d="M45.6,12.9c-0.9-0.9-2.3-0.9-3.2,0l-5,5v-1c0-1.8-1-3.4-2.5-4.3c-1.6-0.9-3.5-0.8-5,0.1l-10.8,6.7c-0.1,0-0.1,0.1-0.2,0.1
+		H6.1c-2.7,0-4.9,2.2-4.9,4.9v15.8c0,2.7,2.2,4.9,4.9,4.9h4l-2.7,2.7c-0.9,0.9-0.9,2.3,0,3.2c0.4,0.4,1,0.7,1.6,0.7
+		c0.6,0,1.2-0.2,1.6-0.7l34.9-35C46.5,15.2,46.5,13.8,45.6,12.9z M6.1,40.7c-0.2,0-0.4-0.2-0.4-0.4V24.5c0-0.2,0.2-0.4,0.4-0.4h12.8
+		c0.9,0,1.8-0.3,2.6-0.7l10.8-6.7c0.1-0.1,0.3-0.1,0.4,0c0.1,0.1,0.2,0.2,0.2,0.3v5.4c0,0,0,0.1,0,0.1L14.7,40.7H6.1z" />
+                                        <path d="M35.1,31.1c-1.2,0-2.3,1-2.3,2.3v14.5c0,0.2-0.1,0.3-0.2,0.3c-0.1,0.1-0.3,0.1-0.4,0l-8.7-5.4c-1.1-0.7-2.4-0.3-3.1,0.7
+		c-0.7,1.1-0.3,2.4,0.7,3.1l8.7,5.4c0.8,0.5,1.7,0.7,2.6,0.7c0.8,0,1.6-0.2,2.4-0.6c1.6-0.9,2.5-2.5,2.5-4.3V33.4
+		C37.4,32.1,36.4,31.1,35.1,31.1z" />
+                                    </g>
+                                </svg>
+                                <div class="green--dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="border: none; background-color: var(--mid-gray); height: 1px;">
+                    <a href="">View all</a>
+                </div>
+
+                <div class="community">
+                    <div class="community__body--header">
+                        <img src="./assets/Icons/community.png" alt="Community">
+                        <h5>Shopping Made Easy</h5>
+                    </div>
+                    <hr style="border: none; background-color: var(--mid-gray); height: 1px;">
+                    <div class="flex">
+                        <div class="flex">
+                            <svg fill="#1C2033" width="52" height="52" version="1.1" id="lni_lni-volume-high"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;"
+                                xml:space="preserve">
+                                <g>
+                                    <path d="M46.9,26.9c-0.8-0.9-2.3-1-3.2-0.1c-0.9,0.8-1,2.3-0.1,3.2c1,1.1,1,3,0,4.2c-0.8,0.9-0.8,2.3,0.1,3.2
+		c0.4,0.4,1,0.6,1.5,0.6c0.6,0,1.2-0.2,1.7-0.7C49.5,34.3,49.5,29.7,46.9,26.9z" />
+                                    <path d="M52.5,22.7c-0.8-0.9-2.3-1-3.2-0.1c-0.9,0.8-1,2.3-0.1,3.2c3.2,3.4,3.2,9,0,12.4c-0.8,0.9-0.8,2.3,0.1,3.2
+		c0.4,0.4,1,0.6,1.5,0.6c0.6,0,1.2-0.2,1.7-0.7C57.2,36.2,57.2,27.8,52.5,22.7z" />
+                                    <path d="M58.1,18.6c-0.8-0.9-2.3-1-3.2-0.1c-0.9,0.8-1,2.3-0.1,3.2c5.3,5.7,5.3,15,0,20.7c-0.8,0.9-0.8,2.3,0.1,3.2
+		c0.4,0.4,1,0.6,1.5,0.6c0.6,0,1.2-0.2,1.7-0.7C64.9,38,64.9,26,58.1,18.6z" />
+                                    <path d="M34.4,12.3c-1.6-0.9-3.5-0.8-5,0.1l-10.8,6.7c-0.1,0-0.1,0.1-0.2,0.1H5.6c-2.7,0-4.9,2.2-4.9,4.9v15.8
+		c0,2.7,2.2,4.9,4.9,4.9h12.8c0.1,0,0.1,0,0.2,0.1l10.8,6.7c0.8,0.5,1.7,0.7,2.6,0.7c0.8,0,1.6-0.2,2.4-0.6c1.6-0.9,2.5-2.5,2.5-4.3
+		V16.5C36.9,14.8,35.9,13.1,34.4,12.3z M32.4,47.5c0,0.2-0.1,0.3-0.2,0.3c-0.1,0.1-0.3,0.1-0.4,0L21,41h0c-0.8-0.5-1.7-0.7-2.6-0.7
+		H5.6c-0.2,0-0.4-0.2-0.4-0.4V24.1c0-0.2,0.2-0.4,0.4-0.4h12.8c0.9,0,1.8-0.3,2.6-0.7l10.8-6.7c0.1-0.1,0.3-0.1,0.4,0
+		c0.1,0.1,0.2,0.2,0.2,0.3V47.5z" />
+                                </g>
+                            </svg>
+                            <div>
+                                <span>Announcements</span>
+                                <p>~ Kishha: Checkout the trendy tees...</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>10:10 AM</p>
+                            <div style="display: flex; align-items: center;">
+                                <svg fill="#1C2033" width="52" height="52" version="1.1" id="lni_lni-volume-mute"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    x="0px" y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;"
+                                    xml:space="preserve">
+                                    <g>
+                                        <path d="M45.6,12.9c-0.9-0.9-2.3-0.9-3.2,0l-5,5v-1c0-1.8-1-3.4-2.5-4.3c-1.6-0.9-3.5-0.8-5,0.1l-10.8,6.7c-0.1,0-0.1,0.1-0.2,0.1
+		H6.1c-2.7,0-4.9,2.2-4.9,4.9v15.8c0,2.7,2.2,4.9,4.9,4.9h4l-2.7,2.7c-0.9,0.9-0.9,2.3,0,3.2c0.4,0.4,1,0.7,1.6,0.7
+		c0.6,0,1.2-0.2,1.6-0.7l34.9-35C46.5,15.2,46.5,13.8,45.6,12.9z M6.1,40.7c-0.2,0-0.4-0.2-0.4-0.4V24.5c0-0.2,0.2-0.4,0.4-0.4h12.8
+		c0.9,0,1.8-0.3,2.6-0.7l10.8-6.7c0.1-0.1,0.3-0.1,0.4,0c0.1,0.1,0.2,0.2,0.2,0.3v5.4c0,0,0,0.1,0,0.1L14.7,40.7H6.1z" />
+                                        <path d="M35.1,31.1c-1.2,0-2.3,1-2.3,2.3v14.5c0,0.2-0.1,0.3-0.2,0.3c-0.1,0.1-0.3,0.1-0.4,0l-8.7-5.4c-1.1-0.7-2.4-0.3-3.1,0.7
+		c-0.7,1.1-0.3,2.4,0.7,3.1l8.7,5.4c0.8,0.5,1.7,0.7,2.6,0.7c0.8,0,1.6-0.2,2.4-0.6c1.6-0.9,2.5-2.5,2.5-4.3V33.4
+		C37.4,32.1,36.4,31.1,35.1,31.1z" />
+                                    </g>
+                                </svg>
+                                <div class="green--dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="border: none; background-color: var(--mid-gray); height: 1px;">
+                    <a href="">View all</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Chats Listing -->
+        <section id="chats" class="">
+            <div class="chats__header">
+                <figure>
+                    <img src="./assets/images/profile-1.jpeg" onclick="showProfile()" alt="Profile"
+                        class="chats__header--profile">
+                </figure>
+                <div class="chats__header__icons">
+                    <div class="chats__header--icon">
+                        <img src="./assets/Icons/community.png" onclick="showCommunity()" alt="Community">
+                    </div>
+                    <div class="chats__header--icon--status">
+                        <img src="./assets/Icons/round-48.png" alt="Status">
+                    </div>
+                    <div class="chats__header--icon--newChat">
+                        <img src="./assets/Icons/comments.png" alt="New chat">
+                    </div>
+                    <div class="chats__header--icon">
+                        <img src="./assets/Icons/menu-vertical.png" alt="Menu">
+                    </div>
+                </div>
+            </div>
+            <div class="chats__search">
+                <div class="chats__search--input">
+                    <img src="./assets/Icons/search.png" alt="">
+                    <input type="text" placeholder="Search or start new chat">
+                </div>
+                <!-- <img src="./assets/Icons/" alt=""> -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25px" height="25px" fill="#8696a0"
+                    style="cursor: pointer;">
+                    <path d="M10 18H14V16H10V18ZM3 6V8H21V6H3ZM6 13H18V11H6V13Z"></path>
+                </svg>
+            </div>
+            <div class="chats__listing">
+                <div class="chat">
+                    <div class="chat__profile">
+                        <figure>
+                            <img src="./assets/images/profile.jpg" alt="Profile Picture">
+                        </figure>
+                    </div>
+                    <div class="chat__details">
+                        <div class="chat__details--heading">
+                            <h4>Client (req: webApp)</h4>
+                            <span>09/09/2023</span>
+                        </div>
+                        <div class="chat__details--texts">
+                            <p>
+                                <img src="./assets/Icons/double-tick.png" class="chat__details--double-tick"
+                                    alt="Double Tick">
+                                I will keep you posted!
+                            </p>
+                            <div>
+                                <img src="./assets/Icons/pin.png" alt="Pin">
+                                <img src="./assets/Icons/down-arrow.png" class="chat__details--down-arrow"
+                                    alt="Down Arrow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="chat__profile">
+                        <figure>
+                            <img src="./assets/images/meta-profile.jpeg" alt="Born On Instagram">
+                        </figure>
+                    </div>
+                    <div class="chat__details">
+                        <div class="chat__details--heading">
+                            <h4>Born on Instagram</h4>
+                            <span>08/09/2023</span>
+                        </div>
+                        <div class="chat__details--texts">
+                            <p>
+                                <!-- <img src="./assets/Icons/double-tick.png" class="chat__details--double-tick"
+                                    alt="Double Tick"> -->
+                                This business is working with other compa...
+                            </p>
+                            <div>
+                                <img src="./assets/Icons/pin.png" alt="Pin">
+                                <img src="./assets/Icons/down-arrow.png" class="chat__details--down-arrow"
+                                    alt="Down Arrow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat chat--active">
+                    <div class="chat__profile">
+                        <figure>
+                            <img src="./assets/images/profile-4.jpg" alt="Profile Picture">
+                        </figure>
+                    </div>
+                    <div class="chat__details">
+                        <div class="chat__details--heading">
+                            <h4>Kate Bellic</h4>
+                            <span>10:21 AM</span>
+                        </div>
+                        <div class="chat__details--texts">
+                            <p>
+                                <img src="./assets/Icons/double-tick.png" class="chat__details--double-tick"
+                                    alt="Double Tick">
+                                😂😂
+                            </p>
+                            <div>
+                                <!-- <img src="./assets/Icons/pin.png" alt="Pin"> -->
+                                <img src="./assets/Icons/down-arrow.png" class="chat__details--down-arrow"
+                                    alt="Down Arrow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="chat__profile">
+                        <figure>
+                            <img src="./assets/images/profile-3.jpg" alt="Profile Picture">
+                        </figure>
+                    </div>
+                    <div class="chat__details">
+                        <div class="chat__details--heading">
+                            <h4>Trevor</h4>
+                            <span>Yesterday</span>
+                        </div>
+                        <div class="chat__details--texts">
+                            <p>
+                                <img src="./assets/Icons/double-tick.png" class="chat__details--double-tick"
+                                    alt="Double Tick">
+                                Here is a 3D Website, I was talking about!
+                            </p>
+                            <div>
+                                <img src="./assets/Icons/down-arrow.png" class="chat__details--down-arrow"
+                                    alt="Down Arrow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat unread">
+                    <div class="chat__profile">
+                        <figure>
+                            <img src="./assets/images/profile-2.jpg" alt="Profile Picture">
+                        </figure>
+                    </div>
+                    <div class="chat__details">
+                        <div class="chat__details--heading">
+                            <h4>Micheal</h4>
+                            <span>08/09/2023</span>
+                        </div>
+                        <div class="chat__details--texts">
+                            <p>
+                                <!-- <img src="./assets/Icons/double-tick.png" class="chat__details--double-tick"
+                                    alt="Double Tick"> -->
+                                Hello!
+                            </p>
+                            <div>
+                                <span class="unread--message--count">1</span>
+                                <img src="./assets/Icons/down-arrow.png" class="chat__details--down-arrow"
+                                    alt="Down Arrow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat unread">
+                    <div class="chat__profile">
+                        <figure>
+                            <img src="./assets/images/profile-5.jpeg" alt="Profile Picture">
+                        </figure>
+                    </div>
+                    <div class="chat__details">
+                        <div class="chat__details--heading">
+                            <h4>Tommy Vercetti</h4>
+                            <span>08/09/2023</span>
+                        </div>
+                        <div class="chat__details--texts">
+                            <p>
+                                <!-- <img src="./assets/Icons/double-tick.png" class="chat__details--double-tick"
+                                    alt="Double Tick"> -->
+                                Yes, that's correct
+                            </p>
+                            <div>
+                                <span class="unread--message--count">3</span>
+                                <img src="./assets/Icons/down-arrow.png" class="chat__details--down-arrow"
+                                    alt="Down Arrow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat unread">
+                    <div class="chat__profile">
+                        <figure>
+                            <img src="./assets/images/profile-6.jpg" alt="Profile Picture">
+                        </figure>
+                    </div>
+                    <div class="chat__details">
+                        <div class="chat__details--heading">
+                            <h4>Lil Jacob</h4>
+                            <span>08/09/2023</span>
+                        </div>
+                        <div class="chat__details--texts">
+                            <p>
+                                <!-- <img src="./assets/Icons/double-tick.png" class="chat__details--double-tick"
+                                    alt="Double Tick"> -->
+                                We'll talk about it later, breda!
+                            </p>
+                            <div>
+                                <span class="unread--message--count">1</span>
+                                <img src="./assets/Icons/down-arrow.png" class="chat__details--down-arrow"
+                                    alt="Down Arrow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- An Opened Chat -->
+        <section id="opened__chat" class="invisible">
+            <div class="opened__chat__header">
+                <div class="opened__chat__profile">
+                    <figure>
+                        <img src="./assets/images/profile-4.jpg" alt="Profile" class="chats__header--profile">
+                    </figure>
+                    <div>
+                        <h4>Kate Bellic</h4>
+                        <span>last seen today at 10:03 AM</span>
+                    </div>
+                </div>
+                <div class="opened__chat__icons">
+                    <div class="opened__chat-icon">
+                        <img src="./assets/Icons/search.png" alt="search chats">
+                    </div>
+                    <div class="opened__chat-icon--menu">
+                        <img src="./assets/Icons/menu-vertical.png" alt="menu">
+                    </div>
+                </div>
+            </div>
+            <div class="opened__chat__body">
+                <span class="opened__chat__body-day">Wednesday</span>
+                <p>Messages are end-to-end encrypted. No one outside of this chat, not even Whatsapp, can read or listen
+                    them. Click to learn more.
+                </p>
+
+                <section class="sent-chat">
+                    <div class="opened__chat--message-container">
+                        <figure>
+                            <img src="./assets/Icons/smile-24.png" class="chat__sent__message-icon" alt="">
+                        </figure>
+                        <div class="opened__chat-sent--message">
+                            <div class="opened__chat-sent--message-triangle-shape">
+                                <div class="up"></div>
+                                <div class="down"></div>
+                                <div class="left"></div>
+                                <div class="right"></div>
+                            </div>
+                            <div class="flex">
+                                <p>
+                                    Hi, Good Afternoon!
+                                    What's going on?
+                                </p>
+                                <figure>
+                                    <img src="./assets/Icons/down-arrow.png" class="chat__sent__message-icon down-arrow"
+                                        alt="">
+                                </figure>
+                            </div>
+                            <div class="opened__chat__seen-info">
+                                <span>10:01 AM</span>
+                                <img src="./assets/Icons/double-tick-blue.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="received-chat">
+                    <div class="opened__chat--message-container">
+                        <div class="opened__chat-received--message">
+                            <div class="opened__chat-received--message-triangle-shape">
+                                <div class="right"></div>
+                            </div>
+                            <div class="flex">
+                                <p>
+                                    Hey, Good Noon, Nothing just woke up!
+                                </p>
+                                <figure>
+                                    <img src="./assets/Icons/down-arrow.png" class="chat__sent__message-icon down-arrow"
+                                        alt="">
+                                </figure>
+                            </div>
+                            <div class="opened__chat__seen-info">
+                                <span>10:10 AM</span>
+                                <img src="./assets/Icons/double-tick-blue.png" alt="">
+                            </div>
+                        </div>
+                        <figure>
+                            <img src="./assets/Icons/smile-24.png" class="chat__sent__message-icon" alt="">
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="received-chat">
+                    <div class="opened__chat--message-container">
+                        <div class="opened__chat-received--message">
+                            <div class="opened__chat-received--message-triangle-shape">
+                                <div class="right"></div>
+                            </div>
+                            <div class="flex">
+                                <p>
+                                    Have you read something intresting, today?
+                                </p>
+                                <figure>
+                                    <img src="./assets/Icons/down-arrow.png" class="chat__sent__message-icon down-arrow"
+                                        alt="">
+                                </figure>
+                            </div>
+                            <div class="opened__chat__seen-info">
+                                <span>10:10 AM</span>
+                                <img src="./assets/Icons/double-tick-blue.png" alt="">
+                            </div>
+                        </div>
+                        <figure>
+                            <img src="./assets/Icons/smile-24.png" class="chat__sent__message-icon" alt="">
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="sent-chat">
+                    <div class="opened__chat--message-container">
+                        <figure>
+                            <img src="./assets/Icons/smile-24.png" class="chat__sent__message-icon" alt="">
+                        </figure>
+                        <div class="opened__chat-sent--message">
+                            <div class="opened__chat-sent--message-triangle-shape">
+                                <div class="up"></div>
+                                <div class="down"></div>
+                                <div class="left"></div>
+                                <div class="right"></div>
+                            </div>
+                            <div class="flex">
+                                <p>
+                                    Ys
+                                </p>
+                                <figure>
+                                    <img src="./assets/Icons/down-arrow.png" class="chat__sent__message-icon down-arrow"
+                                        alt="">
+                                </figure>
+                            </div>
+                            <div class="opened__chat__seen-info">
+                                <span>10:15 AM</span>
+                                <img src="./assets/Icons/double-tick-blue.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="received-chat">
+                    <div class="opened__chat--message-container">
+                        <div class="opened__chat-received--message">
+                            <div class="opened__chat-received--message-triangle-shape">
+                                <div class="right"></div>
+                            </div>
+                            <div class="flex">
+                                <p>
+                                    Did you just shorten a 3 letter word? 🤣
+                                </p>
+                                <figure>
+                                    <img src="./assets/Icons/down-arrow.png" class="chat__sent__message-icon down-arrow"
+                                        alt="">
+                                </figure>
+                            </div>
+                            <div class="opened__chat__seen-info">
+                                <span>10:16 AM</span>
+                                <img src="./assets/Icons/double-tick-blue.png" alt="">
+                            </div>
+                        </div>
+                        <figure>
+                            <img src="./assets/Icons/smile-24.png" class="chat__sent__message-icon" alt="">
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="sent-chat">
+                    <div class="opened__chat--message-container">
+                        <figure>
+                            <img src="./assets/Icons/smile-24.png" class="chat__sent__message-icon" alt="">
+                        </figure>
+                        <div class="opened__chat-sent--message">
+                            <div class="opened__chat-sent--message-triangle-shape">
+                                <div class="up"></div>
+                                <div class="down"></div>
+                                <div class="left"></div>
+                                <div class="right"></div>
+                            </div>
+                            <div class="flex">
+                                <p>
+                                    😂😂
+                                </p>
+                                <figure>
+                                    <img src="./assets/Icons/down-arrow.png" class="chat__sent__message-icon down-arrow"
+                                        alt="">
+                                </figure>
+                            </div>
+                            <div class="opened__chat__seen-info">
+                                <span>10:17 AM</span>
+                                <img src="./assets/Icons/double-tick-blue.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="sent-chat">
+                    <div class="opened__chat--message-container">
+                        <figure>
+                            <img src="./assets/Icons/smile-24.png" class="chat__sent__message-icon" alt="">
+                        </figure>
+                        <div class="opened__chat-sent--message">
+                            <div class="opened__chat-sent--message-triangle-shape">
+                                <div class="up"></div>
+                                <div class="down"></div>
+                                <div class="left"></div>
+                                <div class="right"></div>
+                            </div>
+                            <div class="flex">
+                                <p>
+                                    Idea is to take vowels for granted. 😝
+                                </p>
+                                <figure>
+                                    <img src="./assets/Icons/down-arrow.png" class="chat__sent__message-icon down-arrow"
+                                        alt="">
+                                </figure>
+                            </div>
+                            <div class="opened__chat__seen-info">
+                                <span>10:17 AM</span>
+                                <img src="./assets/Icons/double-tick-blue.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="received-chat">
+                    <div class="opened__chat--message-container">
+                        <div class="opened__chat-received--message">
+                            <div class="opened__chat-received--message-triangle-shape">
+                                <div class="right"></div>
+                            </div>
+                            <div class="flex">
+                                <p>
+                                    Don't take them for granted
+                                </p>
+                                <figure>
+                                    <img src="./assets/Icons/down-arrow.png" class="chat__sent__message-icon down-arrow"
+                                        alt="">
+                                </figure>
+                            </div>
+                            <div class="opened__chat__seen-info">
+                                <span>10:19 AM</span>
+                                <img src="./assets/Icons/double-tick-blue.png" alt="">
+                            </div>
+                        </div>
+                        <figure>
+                            <img src="./assets/Icons/smile-24.png" class="chat__sent__message-icon" alt="">
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="received-chat">
+                    <div class="opened__chat--message-container">
+                        <div class="opened__chat-received--message">
+                            <div class="opened__chat-received--message-triangle-shape">
+                                <div class="right"></div>
+                            </div>
+                            <div class="flex">
+                                <p>
+                                    Vowels have feelings too 😆
+                                </p>
+                                <figure>
+                                    <img src="./assets/Icons/down-arrow.png" class="chat__sent__message-icon down-arrow"
+                                        alt="">
+                                </figure>
+                            </div>
+                            <div class="opened__chat__seen-info">
+                                <span>10:20 AM</span>
+                                <img src="./assets/Icons/double-tick-blue.png" alt="">
+                            </div>
+                        </div>
+                        <figure>
+                            <img src="./assets/Icons/smile-24.png" class="chat__sent__message-icon" alt="">
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="sent-chat">
+                    <div class="opened__chat--message-container">
+                        <figure>
+                            <img src="./assets/Icons/smile-24.png" class="chat__sent__message-icon" alt="">
+                        </figure>
+                        <div class="opened__chat-sent--message">
+                            <div class="opened__chat-sent--message-triangle-shape">
+                                <div class="right"></div>
+                            </div>
+                            <div class="flex">
+                                <p class="sent-message">
+                                    😂
+                                </p>
+                                <figure>
+                                    <img src="./assets/Icons/down-arrow.png" class="chat__sent__message-icon down-arrow"
+                                        alt="">
+                                </figure>
+                            </div>
+                            <div class="opened__chat__seen-info">
+                                <span>10:23 AM</span>
+                                <img src="./assets/Icons/double-tick-blue.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="opened__chat__footer">
+                <figure>
+                    <img src="./assets/Icons/smile-24.png" class="opened__chat__footer--smile-icon" alt="">
+                </figure>
+                <figure>
+                    <img src="./assets/Icons/plus-24.png" alt="">
+                </figure>
+                <input type="text" name="" id="" placeholder="Type a message">
+                <figure>
+                    <img src="./assets/Icons/send-30.png" alt="">
+                </figure>
+            </div>
+        </section>
+
+        <!-- Opened Chat Contact Info -->
+        <section id="contact-info" class="">
+            <div class="contact__info__header">
+                <?xml version="1.0" encoding="utf-8"?>
+                <!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <svg fill="#1C2033" width="52" height="52" version="1.1" id="contact__info-close"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+                    <path d="M35.2,32L59.6,7.6c0.9-0.9,0.9-2.3,0-3.2c-0.9-0.9-2.3-0.9-3.2,0L32,28.8L7.6,4.4c-0.9-0.9-2.3-0.9-3.2,0
+	c-0.9,0.9-0.9,2.3,0,3.2L28.8,32L4.4,56.4c-0.9,0.9-0.9,2.3,0,3.2c0.4,0.4,1,0.7,1.6,0.7c0.6,0,1.2-0.2,1.6-0.7L32,35.2l24.4,24.4
+	c0.4,0.4,1,0.7,1.6,0.7c0.6,0,1.2-0.2,1.6-0.7c0.9-0.9,0.9-2.3,0-3.2L35.2,32z" />
+                </svg>
+                <span>Contact Info</span>
+            </div>
+            <div class="contact__info__body">
+                <div class="contact__info__body__profile">
+                    <figure>
+                        <img src="./assets/images/profile-4.jpg" alt="">
+                    </figure>
+                    <h4>Kate Bellic</h4>
+                    <p>+91 98765 4321</p>
+                </div>
+                <div class="contact__info__body__about">
+                    <span>About</span>
+                    <div class="profile__body__info-name">
+                        <p>SENDING YOU LOVE!!</p>
+                    </div>
+                </div>
+                <div class="contact__info__body__media">
+                    <div class="flex">
+                        <span>Media, links and docs</span>
+                        <div class="flex">
+                            <span>17</span>
+                            <?xml version="1.0" encoding="utf-8"?>
+                            <!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                            <svg fill="#1C2033" width="52" height="52" version="1.1" id="lni_lni-chevron-right"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;"
+                                xml:space="preserve">
+                                <g>
+                                    <path d="M20.7,57.3c-0.6,0-1.1-0.2-1.6-0.6c-0.9-0.9-0.9-2.3,0-3.2L40.1,32L19.1,10.6c-0.9-0.9-0.9-2.3,0-3.2
+		c0.9-0.9,2.3-0.9,3.2,0l22.6,23c0.9,0.9,0.9,2.3,0,3.2l-22.6,23C21.9,57,21.3,57.3,20.7,57.3z" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="contact__info__body__media-images">
+                        <figure>
+                            <img src="./assets/images/whatsapp-banner.png" alt="">
+                            <div class="mask"></div>
+                        </figure>
+                        <figure>
+                            <img src="./assets/images/whatsapp-banner.png" alt="">
+                            <div class="mask"></div>
+                        </figure>
+                        <figure>
+                            <img src="./assets/images/whatsapp-banner.png" alt="">
+                            <div class="mask"></div>
+                        </figure>
+                    </div>
+                </div>
+                <div class="contact__info__body__otherOptions">
+                    <div class="flex">
+                        <div>
+                            <svg fill="#1C2033" width="52" height="52" version="1.1" id="lni_lni-star-fill"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;"
+                                xml:space="preserve">
+                                <path
+                                    d="M59.7,23.9l-18.1-2.8L33.4,3.9c-0.6-1.2-2.2-1.2-2.8,0l-8.2,17.3L4.4,23.9c-1.3,0.2-1.8,1.9-0.8,2.8l13.1,13.5l-3.1,18.9
+	c-0.2,1.3,1.1,2.4,2.3,1.6l16.3-8.9l16.2,8.9c1.1,0.6,2.5-0.4,2.2-1.6l-3.1-18.9l13.1-13.5C61.4,25.8,61,24.1,59.7,23.9z" />
+                            </svg>
+                            <span>Starred messages</span>
+                        </div>
+                        <svg fill="#1C2033" width="52" height="52" version="1.1" id="lni_lni-chevron-right"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                            y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+                            <g>
+                                <path d="M20.7,57.3c-0.6,0-1.1-0.2-1.6-0.6c-0.9-0.9-0.9-2.3,0-3.2L40.1,32L19.1,10.6c-0.9-0.9-0.9-2.3,0-3.2
+		c0.9-0.9,2.3-0.9,3.2,0l22.6,23c0.9,0.9,0.9,2.3,0,3.2l-22.6,23C21.9,57,21.3,57.3,20.7,57.3z" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="flex">
+                        <div>
+                            <svg fill="#1C2033" width="52" height="52" version="1.1" id="lni_lni-timer"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;"
+                                xml:space="preserve">
+                                <g>
+                                    <path d="M34.3,12V6.3h5.4c1.2,0,2.3-1,2.3-2.3s-1-2.3-2.3-2.3H24.4c-1.2,0-2.3,1-2.3,2.3s1,2.3,2.3,2.3h5.4V12
+		C16.9,13.2,6.8,24,6.8,37.1C6.8,51,18.1,62.3,32,62.3S57.2,51,57.2,37.1C57.2,24,47.1,13.2,34.3,12z M32,57.8
+		c-11.4,0-20.7-9.3-20.7-20.7S20.6,16.4,32,16.4s20.7,9.3,20.7,20.7S43.4,57.8,32,57.8z" />
+                                    <path d="M44.7,34.8H34.3V24.4c0-1.2-1-2.3-2.3-2.3c-1.2,0-2.3,1-2.3,2.3v10.5h-2.8c-1.2,0-2.3,1-2.3,2.3s1,2.3,2.3,2.3h2.8v2.8
+		c0,1.2,1,2.3,2.3,2.3c1.2,0,2.3-1,2.3-2.3v-2.8h10.5c1.2,0,2.3-1,2.3-2.3S46,34.8,44.7,34.8z" />
+                                </g>
+                            </svg>
+                            <span>Disappearing messages</span>
+                        </div>
+                        <svg fill="#1C2033" width="52" height="52" version="1.1" id="lni_lni-chevron-right"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                            y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+                            <g>
+                                <path d="M20.7,57.3c-0.6,0-1.1-0.2-1.6-0.6c-0.9-0.9-0.9-2.3,0-3.2L40.1,32L19.1,10.6c-0.9-0.9-0.9-2.3,0-3.2
+		c0.9-0.9,2.3-0.9,3.2,0l22.6,23c0.9,0.9,0.9,2.3,0,3.2l-22.6,23C21.9,57,21.3,57.3,20.7,57.3z" />
+                            </g>
+                        </svg>
+                    </div>
+                    <!-- Encryption -->
+                    <div class="encryption--flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="13px" fill="#8696a0">
+                            <path
+                                d="M19 10H20C20.5523 10 21 10.4477 21 11V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V11C3 10.4477 3.44772 10 4 10H5V9C5 5.13401 8.13401 2 12 2C15.866 2 19 5.13401 19 9V10ZM17 10V9C17 6.23858 14.7614 4 12 4C9.23858 4 7 6.23858 7 9V10H17ZM11 14V18H13V14H11Z">
+                            </path>
+                        </svg>
+                        <div>
+                            <span>Encryption</span>
+                            <p>Messages are end-to-end encrypted. Click to verify.</p>
+                        </div>
+                    </div>
+                    <!-- Deletion -->
+                    <div class="deletion--flex">
+                        <svg fill="#1C2033" width="52" height="52" version="1.1" id="lni_lni-trash-can"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                            y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+                            <g>
+                                <path d="M48.9,8.8h-7.7V7.1c0-3-2.4-5.4-5.4-5.4h-7.7c-3,0-5.4,2.4-5.4,5.4v1.7h-7.7c-2.9,0-5.3,2.4-5.3,5.3v3c0,2.2,1.3,4,3.2,4.8
+		l1.6,34.6c0.2,3.3,2.8,5.8,6.1,5.8h22.5c3.3,0,6-2.6,6.1-5.8L51,21.8c1.9-0.8,3.2-2.7,3.2-4.8v-3C54.2,11.2,51.8,8.8,48.9,8.8z
+		 M27.3,7.1c0-0.5,0.4-0.9,0.9-0.9h7.7c0.5,0,0.9,0.4,0.9,0.9v1.7h-9.4V7.1z M14.3,14.1c0-0.4,0.3-0.8,0.8-0.8h33.8
+		c0.4,0,0.8,0.3,0.8,0.8v3c0,0.4-0.3,0.8-0.8,0.8H15.1c-0.4,0-0.8-0.3-0.8-0.8V14.1z M43.2,57.8H20.8c-0.9,0-1.6-0.7-1.6-1.5
+		l-1.6-33.9h28.9l-1.6,33.9C44.8,57.1,44.1,57.8,43.2,57.8z" />
+                                <path
+                                    d="M32,32.4c-1.2,0-2.3,1-2.3,2.3v12.7c0,1.2,1,2.3,2.3,2.3c1.2,0,2.3-1,2.3-2.3V34.7C34.3,33.4,33.2,32.4,32,32.4z" />
+                                <path d="M40,34.4c-1.3-0.1-2.3,0.8-2.4,2.1l-0.6,8.8c-0.1,1.2,0.8,2.3,2.1,2.4c0.1,0,0.1,0,0.2,0c1.2,0,2.2-0.9,2.2-2.1l0.6-8.8
+		C42.1,35.5,41.2,34.5,40,34.4z" />
+                                <path d="M23.9,34.4c-1.2,0.1-2.2,1.2-2.1,2.4l0.7,8.8c0.1,1.2,1.1,2.1,2.2,2.1c0.1,0,0.1,0,0.2,0c1.2-0.1,2.2-1.2,2.1-2.4l-0.7-8.8
+		C26.3,35.2,25.2,34.3,23.9,34.4z" />
+                            </g>
+                        </svg>
+                        <span>Delete chat</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- App AD Banner -->
+        <section id="banner" class="">
+            <div class="banner">
+                <figure>
+                    <img src="./assets/images/whatsapp-banner.png" alt="" class="banner__image">
+                </figure>
+                <h2>Download Whatsapp for Windows</h2>
+                <p>Make calls, share your screen and get a faster experience when you download the <br> Windows app.</p>
+                <button>Get the app</button>
+            </div>
+            <div class="flex">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="13px" fill="#8696a0">
+                    <path
+                        d="M19 10H20C20.5523 10 21 10.4477 21 11V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V11C3 10.4477 3.44772 10 4 10H5V9C5 5.13401 8.13401 2 12 2C15.866 2 19 5.13401 19 9V10ZM17 10V9C17 6.23858 14.7614 4 12 4C9.23858 4 7 6.23858 7 9V10H17ZM11 14V18H13V14H11Z">
+                    </path>
+                </svg>
+                <p>End-to-end encrypted</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
