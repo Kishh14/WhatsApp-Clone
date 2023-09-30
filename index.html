@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhatsApp | Kishh Salvi</title>
+    <title>WhatsApp</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/profile.css">
     <link rel="stylesheet" href="./assets/css/contact-info.css">
     <link rel="stylesheet" href="./assets/css/community.css">
+    <link rel="stylesheet" href="./assets/css/new-chat.css">
 </head>
 
 <body>
@@ -208,6 +210,93 @@
             </div>
         </section>
 
+        <!-- New Chat -->
+        <section id="new__chat" class="">
+            <div class="new-chat__header profile__header">
+                <svg xmlns="http://www.w3.org/2000/svg" id="new-chat_left_arrow" viewBox="0 0 24 24">
+                    <path
+                        d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z">
+                    </path>
+                </svg>
+                <h4>New Chat</h4>
+            </div>
+            <div class="new-chat__body">
+                <div class="new-chat__search">
+                    <i class="ri-search-line"></i>
+                    <input type="text" placeholder="Search name or number">
+                </div>
+                <section>
+                    <div class="new-chat__community flex">
+                        <div class="new-chat__community-icon">
+                            <img src="./assets/Icons/community.png" alt="Community">
+                        </div>
+                        <span>New group</span>
+                    </div>
+                    <div class="new-chat__community flex">
+                        <div class="new-chat__community-icon">
+                            <img src="./assets/Icons/community.png" alt="Community">
+                        </div>
+                        <span>New community</span>
+                    </div>
+                    <h4>Contacts on WhatsApp</h4>
+                    <div class="new-chat__contact-list">
+                        <h4>A</h4>
+                        <div class="new-chat__contact">
+                            <div class="contact__picture">
+                                <img src="./assets/images/profile-2.jpg" alt="">
+                            </div>
+                            <div class="contact-details">
+                                <h5>Arya Jha</h5>
+                                <p>Battery about to die</p>
+                            </div>
+                        </div>
+                        <hr class="new-chat__divider">
+                        <div class="new-chat__contact">
+                            <div class="contact__picture">
+                                <img src="./assets/images/profile-3.jpg" alt="">
+                            </div>
+                            <div class="contact-details">
+                                <h5>Arian Bellic</h5>
+                                <p>Available</p>
+                            </div>
+                        </div>
+                        <hr class="new-chat__divider">
+                        <div class="new-chat__contact">
+                            <div class="contact__picture">
+                                <img src="./assets/images/profile-4.jpg" alt="">
+                            </div>
+                            <div class="contact-details">
+                                <h5>Angel</h5>
+                                <p>Life is a Fairytale 🪄</p>
+                            </div>
+                        </div>
+                        <hr class="new-chat__divider">
+                        <h4>B</h4>
+                        <div class="new-chat__contact">
+                            <div class="contact__picture">
+                                <img src="./assets/images/profile-6.jpg" alt="">
+                            </div>
+                            <div class="contact-details">
+                                <h5>Bisai Pape</h5>
+                                <p>Available</p>
+                            </div>
+                        </div>
+                        <hr class="new-chat__divider">
+                        <div class="new-chat__contact">
+                            <div class="contact__picture">
+                                <img src="./assets/images/profile-5.jpeg" alt="">
+                            </div>
+                            <div class="contact-details">
+                                <h5>Bobby Yusuf</h5>
+                                <p>Lambo 🚗</p>
+                            </div>
+                        </div>
+                        <hr class="new-chat__divider">
+                    </div>
+                </section>
+            </div>
+        </section>
+
 
         <!-- Chats Listing -->
         <section id="chats" class="">
@@ -218,29 +307,25 @@
                 </figure>
                 <div class="chats__header__icons">
                     <div class="chats__header--icon">
-                        <img src="./assets/Icons/community.png" onclick="showCommunity()" alt="Community">
-                    </div>
-                    <div class="chats__header--icon--status">
-                        <img src="./assets/Icons/round-48.png" alt="Status">
-                    </div>
-                    <div class="chats__header--icon--newChat">
-                        <img src="./assets/Icons/comments.png" alt="New chat">
+                        <i class="ri-team-fill" onclick="showCommunity()"></i>
                     </div>
                     <div class="chats__header--icon">
-                        <img src="./assets/Icons/menu-vertical.png" alt="Menu">
+                        <i class="ri-donut-chart-line" onclick="window.location.href='status.html'"></i>
+                    </div>
+                    <div class="chats__header--icon">
+                        <i class="ri-chat-new-fill" onclick="showNewChat()"></i>
+                    </div>
+                    <div class="chats__header--icon">
+                        <i class="ri-more-2-line"></i>
                     </div>
                 </div>
             </div>
             <div class="chats__search">
                 <div class="chats__search--input">
-                    <img src="./assets/Icons/search.png" alt="">
+                    <i class="ri-search-line"></i>
                     <input type="text" placeholder="Search or start new chat">
                 </div>
-                <!-- <img src="./assets/Icons/" alt=""> -->
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25px" height="25px" fill="#8696a0"
-                    style="cursor: pointer;">
-                    <path d="M10 18H14V16H10V18ZM3 6V8H21V6H3ZM6 13H18V11H6V13Z"></path>
-                </svg>
+                <i class="ri-filter-3-line"></i>
             </div>
             <div class="chats__listing">
                 <div class="chat">
@@ -900,7 +985,7 @@
         </section>
     </main>
 
-    <script src="script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

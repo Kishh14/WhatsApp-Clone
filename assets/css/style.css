@@ -20,6 +20,7 @@
 
     --primary-font: 'Segoe UI Regular';
 
+    --clr-border: #950000;
     --dark-gray: #54656f;
     --light-gray: #8696a0;
     --mid-gray: #e6e9ec;
@@ -83,11 +84,15 @@ main {
     gap: 18px;
 }
 
-.chats__header--icon img,
-.chats__search img {
+
+.chats__search img,
+.chats__header--icon i {
     width: 33px;
     height: 33px;
     object-fit: cover;
+
+    font-size: 22px;
+    color: var(--dark-gray);
 
     cursor: pointer;
 }
@@ -119,14 +124,10 @@ main {
     border-radius: 12px;
 }
 
-.chats__search--input img {
-    width: 20px;
-    height: 20px;
-}
-
-.chats__search>img {
-    width: 28px;
-    height: 28px;
+.chats__search i {
+    font-size: 19px;
+    color: var(--dark-gray);
+    cursor: pointer;
 }
 
 .chats__search--input input {

@@ -135,3 +135,13 @@ const showProfile = () => {
     openedChat.classList.remove("invisible");
   });
   
+  // Show New Chat Section
+  let newChatBackBtn = document.getElementById("new-chat_left_arrow");
+  let newChatSection = document.getElementById("new__chat");
+  const showNewChat = () => {
+    newChatSection.style.left = "0%";
+  };
+  newChatBackBtn.addEventListener("click", () => {
+    newChatSection.style.left = "-30%";
+  });
+  

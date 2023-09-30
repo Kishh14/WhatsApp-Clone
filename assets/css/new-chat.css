@@ -1,0 +1,146 @@
+#new__chat {
+    width: 30%;
+
+    position: absolute;
+    left: -30%;
+    z-index: 9999;
+    transition: 100ms;
+}
+
+.new-chat__body {
+    background: var(--white-color);
+    padding-bottom: 1px;
+    padding-top: 15px;
+}
+
+.new-chat__search {
+    background-color: var(--secondary-color);
+    padding: 5px 20px;
+    margin: 0 15px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.new-chat__search i {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.new-chat__search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    background-color: var(--secondary-color);
+}
+
+.new-chat__community,
+.new-chat__community {
+    background: var(--white-color);
+    margin-bottom: 2px;
+    padding: 10px 20px;
+    gap: 15px;
+
+    box-shadow: 1px 1px 1px 1px #d4d2d282;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.new-chat__community:hover,
+.new-chat__contact:hover {
+    background: var(--secondary-color);
+}
+
+.new-chat__community-icon img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    padding: 8px;
+
+    background: var(--accent-color);
+    border-radius: 12px;
+}
+
+.new-chat__community span {
+    font-size: 17px;
+    font-family: var(--primary-font);
+}
+
+.new-chat__body h4 {
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--primary-color);
+
+    margin: 10px;
+}
+
+.new-chat__contact-list {
+    padding: 10px 0px;
+
+    position: relative;
+}
+
+.new-chat__contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 20px;
+
+    cursor: pointer;
+    transition: .5s;
+}
+
+.contact__picture img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+
+    border-radius: 50px;
+}
+
+.contact-details h5 {
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.contact-details p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--dark-gray);
+}
+
+.new-chat__contact-list h4 {
+    color: var(--primary-color);
+    padding: 0px 31px;
+}
+
+.new-chat__divider {
+    border: 1px solid rgba(188, 188, 188, 0.299);
+    width: 82%;
+    position: absolute;
+    right: 0%;
+}
+
+.new-chat__body section {
+    height: 100vh;
+    overflow-y: scroll;
+
+    padding-bottom: 200px;
+}
+
+.new-chat__body section::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--white-color);
+}
+
+.new-chat__body section::-webkit-scrollbar-thumb {
+    background-color: var(--mid-gray);
+    width: 8px;
+    border-radius: 10px;
+}
